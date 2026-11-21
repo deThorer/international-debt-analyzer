@@ -5,3 +5,4 @@ __pycache__/
 *.db
 data/raw/*.csv
 !data/raw/international_debt_sample.csv
+!data/raw/international_debt.csv

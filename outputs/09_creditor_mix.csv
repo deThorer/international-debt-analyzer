@@ -1,0 +1,9 @@
+flow_type,creditor,amount_bn_usd,pct_of_long_term
+AMT,Private non-guaranteed,373.24,58.5
+AMT,Private (PPG),159.29,25.0
+AMT,Official (PPG),105.23,16.5
+DIS,Official (PPG),139.47,86.8
+DIS,Private (PPG),12.22,7.6
+INT,Private non-guaranteed,84.66,48.8
+INT,Private (PPG),64.46,37.1
+INT,Official (PPG),24.46,14.1

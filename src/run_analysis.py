@@ -94,8 +94,11 @@ def write_findings(results, data_file, is_sample):
         lines.append(f"- Long-term principal repayments by creditor: {parts}.")
     avg_top = get("05_avg_debt_by_indicator")["debt_indicator"].head(3).tolist()
     n_lt = sum(".DLXF." in c for c in avg_top)
-    lines.append(f"- {n_lt} of the 3 indicators with the highest averages are long-term (DLXF) series, and "
-                 "they are the only series that can be summed without double counting. "
+    if n_lt == 1:
+        lt_text = "One of the 3 indicators with the highest averages is a long-term (DLXF) series"
+    else:
+        lt_text = f"{n_lt} of the 3 indicators with the highest averages are long-term (DLXF) series"
+    lines.append(f"- {lt_text}, and long-term series are the only ones that can be summed without double counting. "
                  "**Recommendation:** use long-term debt as the headline measure and break it down by "
                  "creditor type, instead of adding up all 25 indicators.")
     lines += ["", "See `outputs/` for every query result and `outputs/charts/` for the charts."]

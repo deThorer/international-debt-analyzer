@@ -11,10 +11,16 @@ and added a check for a problem the basic version misses: **the indicators doubl
 
 | | |
 |---|---|
-| Country entries in the raw data | 124 (regional/income aggregates, if any, are flagged and excluded from rankings) |
+| Country entries in the raw data | 124, of which 3 are regional aggregates (South Asia, IDA only, Least developed countries), so **121 countries** |
 | Debt indicators | 25 |
-| Top debtor | China, US$ 285.8 bn (sum of all indicators) |
+| Top debtor | **China, US$ 285.79 bn** (sum of all indicators; US$ 129.78 bn without double counting), then Brazil and Russia |
+| Double counting | 60% of the naive total (US$ 2.44 tn) is the same money counted at several levels |
+| Who long-term principal is owed to | Private non-guaranteed 58%, private PPG 25%, official 16% |
 | Main recommendation | Use long-term debt (DLXF) as the headline measure and split it by creditor |
+
+Full output: [`reports/findings.md`](reports/findings.md) and [`outputs/`](outputs/).
+
+![Top debtors](outputs/charts/top10_debtors.png)
 
 > The numbers in `reports/findings.md` are regenerated on every run. If you run the
 > project with the synthetic sample, they will be different and the report says so.
@@ -64,7 +70,7 @@ international-debt-analysis/
 pip install -r requirements.txt
 
 # 1. get the data (any one of these)
-#    a) put the DataCamp file at data/raw/international_debt.csv
+#    a) the DataCamp file is included at data/raw/international_debt.csv
 #    b) python scripts/fetch_worldbank.py --year 2015
 #    c) python scripts/make_sample_data.py      # synthetic, for testing only
 

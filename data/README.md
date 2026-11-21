@@ -2,9 +2,10 @@
 
 The raw data is not committed to git (see `.gitignore`).
 
-## Option A: DataCamp extract (what the results in the main README use)
-From the DataCamp project "Analyze International Debt Statistics".
-Save it as `data/raw/international_debt.csv`.
+## Option A: DataCamp extract (included; what the results in the main README use)
+`data/raw/international_debt.csv`: 2,357 rows, from the DataCamp project "Analyze International
+Debt Statistics". Original source: World Bank, International Debt Statistics
+(https://datacatalog.worldbank.org), licensed CC BY 4.0.
 
 Columns:
 
